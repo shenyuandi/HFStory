@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		659CD2E4FFEEF7722B78FEE2 /* libPods-HFStory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78179D9CF523AE512802E2D /* libPods-HFStory.a */; };
-		789A5F3F9C42F29AEB1583A1 /* libPods-HFStoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 262075AF17C4CCD06879BF81 /* libPods-HFStoryTests.a */; };
-		9D00D9525ACB201FF9E413BD /* libPods-HFStoryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F1D2BD6D42D2DE1F030F36 /* libPods-HFStoryUITests.a */; };
 		A124E8F82170914A009B7CBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E8F72170914A009B7CBB /* AppDelegate.m */; };
 		A124E8FB2170914A009B7CBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E8FA2170914A009B7CBB /* ViewController.m */; };
 		A124E8FE2170914A009B7CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A124E8FC2170914A009B7CBB /* Main.storyboard */; };
@@ -18,6 +15,15 @@
 		A124E9062170914B009B7CBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E9052170914B009B7CBB /* main.m */; };
 		A124E9102170914C009B7CBB /* HFStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E90F2170914C009B7CBB /* HFStoryTests.m */; };
 		A124E91B2170914C009B7CBB /* HFStoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E91A2170914C009B7CBB /* HFStoryUITests.m */; };
+		A126292921739DE8006DFC7A /* Target_HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A126292821739DE8006DFC7A /* Target_HomePage.m */; };
+		A14664F421723DCD0058BD03 /* HFUIStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14664F321723DCD0058BD03 /* HFUIStoryView.m */; };
+		A14664F821735BB40058BD03 /* HFUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A14664F721735BB40058BD03 /* HFUserModel.m */; };
+		A14664FE2173658C0058BD03 /* HFHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14664FC2173658C0058BD03 /* HFHomePageViewController.m */; };
+		A14664FF2173658C0058BD03 /* HFHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14664FD2173658C0058BD03 /* HFHomePageViewController.xib */; };
+		A146650E217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A146650D217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m */; };
+		AB78B5EF652FFD65D5D3E690 /* libPods-HFStoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF54368F5E7CDE519FA0CCD /* libPods-HFStoryTests.a */; };
+		CCFAF4CF049E80E448C3717C /* libPods-HFStory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD174346248597DF06BF7CC /* libPods-HFStory.a */; };
+		E60064C01C195FCE38306E86 /* libPods-HFStoryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D113DE02B8197287D65B677 /* libPods-HFStoryUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +45,12 @@
 
 /* Begin PBXFileReference section */
 		1C5005D1CC494C715F5D60A3 /* Pods-HFStoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStoryUITests.release.xcconfig"; path = "Target Support Files/Pods-HFStoryUITests/Pods-HFStoryUITests.release.xcconfig"; sourceTree = "<group>"; };
-		262075AF17C4CCD06879BF81 /* libPods-HFStoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFStoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD174346248597DF06BF7CC /* libPods-HFStory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFStory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AF54368F5E7CDE519FA0CCD /* libPods-HFStoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFStoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB214D0AB7699AB43C53FE /* Pods-HFStoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStoryTests.debug.xcconfig"; path = "Target Support Files/Pods-HFStoryTests/Pods-HFStoryTests.debug.xcconfig"; sourceTree = "<group>"; };
-		70F1D2BD6D42D2DE1F030F36 /* libPods-HFStoryUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFStoryUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8495E0B8A1F858B761ACC701 /* Pods-HFStoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStoryTests.release.xcconfig"; path = "Target Support Files/Pods-HFStoryTests/Pods-HFStoryTests.release.xcconfig"; sourceTree = "<group>"; };
-		A124E8F32170914A009B7CBB /* HFStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D113DE02B8197287D65B677 /* libPods-HFStoryUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFStoryUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A124E8F32170914A009B7CBB /* 真趣.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "真趣.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A124E8F62170914A009B7CBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A124E8F72170914A009B7CBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A124E8F92170914A009B7CBB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -59,8 +66,18 @@
 		A124E9162170914C009B7CBB /* HFStoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HFStoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A124E91A2170914C009B7CBB /* HFStoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFStoryUITests.m; sourceTree = "<group>"; };
 		A124E91C2170914C009B7CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A126292721739DE8006DFC7A /* Target_HomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_HomePage.h; sourceTree = "<group>"; };
+		A126292821739DE8006DFC7A /* Target_HomePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_HomePage.m; sourceTree = "<group>"; };
+		A14664F221723DCD0058BD03 /* HFUIStoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFUIStoryView.h; sourceTree = "<group>"; };
+		A14664F321723DCD0058BD03 /* HFUIStoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFUIStoryView.m; sourceTree = "<group>"; };
+		A14664F621735BB40058BD03 /* HFUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFUserModel.h; sourceTree = "<group>"; };
+		A14664F721735BB40058BD03 /* HFUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFUserModel.m; sourceTree = "<group>"; };
+		A14664FB2173658C0058BD03 /* HFHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFHomePageViewController.h; sourceTree = "<group>"; };
+		A14664FC2173658C0058BD03 /* HFHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHomePageViewController.m; sourceTree = "<group>"; };
+		A14664FD2173658C0058BD03 /* HFHomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HFHomePageViewController.xib; sourceTree = "<group>"; };
+		A146650C217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorModuleHomePage.h"; sourceTree = "<group>"; };
+		A146650D217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorModuleHomePage.m"; sourceTree = "<group>"; };
 		B9B3463CDCC60F3F18ADBDC1 /* Pods-HFStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStory.release.xcconfig"; path = "Target Support Files/Pods-HFStory/Pods-HFStory.release.xcconfig"; sourceTree = "<group>"; };
-		D78179D9CF523AE512802E2D /* libPods-HFStory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFStory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B722DD4A1622317E0BC270 /* Pods-HFStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStory.debug.xcconfig"; path = "Target Support Files/Pods-HFStory/Pods-HFStory.debug.xcconfig"; sourceTree = "<group>"; };
 		E937FF9CD4A2D51B13D5E783 /* Pods-HFStoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStoryUITests.debug.xcconfig"; path = "Target Support Files/Pods-HFStoryUITests/Pods-HFStoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659CD2E4FFEEF7722B78FEE2 /* libPods-HFStory.a in Frameworks */,
+				CCFAF4CF049E80E448C3717C /* libPods-HFStory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				789A5F3F9C42F29AEB1583A1 /* libPods-HFStoryTests.a in Frameworks */,
+				AB78B5EF652FFD65D5D3E690 /* libPods-HFStoryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D00D9525ACB201FF9E413BD /* libPods-HFStoryUITests.a in Frameworks */,
+				E60064C01C195FCE38306E86 /* libPods-HFStoryUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +113,9 @@
 		96ABF7A8FB0EC28C875CB250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D78179D9CF523AE512802E2D /* libPods-HFStory.a */,
-				262075AF17C4CCD06879BF81 /* libPods-HFStoryTests.a */,
-				70F1D2BD6D42D2DE1F030F36 /* libPods-HFStoryUITests.a */,
+				1FD174346248597DF06BF7CC /* libPods-HFStory.a */,
+				5AF54368F5E7CDE519FA0CCD /* libPods-HFStoryTests.a */,
+				9D113DE02B8197287D65B677 /* libPods-HFStoryUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,7 +135,7 @@
 		A124E8F42170914A009B7CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A124E8F32170914A009B7CBB /* HFStory.app */,
+				A124E8F32170914A009B7CBB /* 真趣.app */,
 				A124E90B2170914C009B7CBB /* HFStoryTests.xctest */,
 				A124E9162170914C009B7CBB /* HFStoryUITests.xctest */,
 			);
@@ -128,6 +145,9 @@
 		A124E8F52170914A009B7CBB /* HFStory */ = {
 			isa = PBXGroup;
 			children = (
+				A1466506217378170058BD03 /* ModuelCategory */,
+				A14664F521735B5A0058BD03 /* NetWorkService */,
+				A1E5EAD82171F69900832A44 /* Moduel */,
 				A124E8F62170914A009B7CBB /* AppDelegate.h */,
 				A124E8F72170914A009B7CBB /* AppDelegate.m */,
 				A124E8F92170914A009B7CBB /* ViewController.h */,
@@ -159,6 +179,94 @@
 			path = HFStoryUITests;
 			sourceTree = "<group>";
 		};
+		A126292621739D8E006DFC7A /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				A126292721739DE8006DFC7A /* Target_HomePage.h */,
+				A126292821739DE8006DFC7A /* Target_HomePage.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		A14664F521735B5A0058BD03 /* NetWorkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWorkService;
+			sourceTree = "<group>";
+		};
+		A1466506217378170058BD03 /* ModuelCategory */ = {
+			isa = PBXGroup;
+			children = (
+				A1466507217379280058BD03 /* HomePage */,
+			);
+			path = ModuelCategory;
+			sourceTree = "<group>";
+		};
+		A1466507217379280058BD03 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				A146650C217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.h */,
+				A146650D217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		A1E5EAD82171F69900832A44 /* Moduel */ = {
+			isa = PBXGroup;
+			children = (
+				A1E5EAD92171F85700832A44 /* HomePage */,
+			);
+			path = Moduel;
+			sourceTree = "<group>";
+		};
+		A1E5EAD92171F85700832A44 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				A126292621739D8E006DFC7A /* Actions */,
+				A1E5EADC2171F8BF00832A44 /* View */,
+				A1E5EADF21720D1700832A44 /* Controller */,
+				A1E5EADE21720D0200832A44 /* ViewModel */,
+				A1E5EADA2171F87200832A44 /* Model */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		A1E5EADA2171F87200832A44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A14664F621735BB40058BD03 /* HFUserModel.h */,
+				A14664F721735BB40058BD03 /* HFUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1E5EADC2171F8BF00832A44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A14664F221723DCD0058BD03 /* HFUIStoryView.h */,
+				A14664F321723DCD0058BD03 /* HFUIStoryView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1E5EADE21720D0200832A44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1E5EADF21720D1700832A44 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A14664FB2173658C0058BD03 /* HFHomePageViewController.h */,
+				A14664FC2173658C0058BD03 /* HFHomePageViewController.m */,
+				A14664FD2173658C0058BD03 /* HFHomePageViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CCD8647E7658069C69B159F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +277,6 @@
 				E937FF9CD4A2D51B13D5E783 /* Pods-HFStoryUITests.debug.xcconfig */,
 				1C5005D1CC494C715F5D60A3 /* Pods-HFStoryUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -191,7 +298,7 @@
 			);
 			name = HFStory;
 			productName = HFStory;
-			productReference = A124E8F32170914A009B7CBB /* HFStory.app */;
+			productReference = A124E8F32170914A009B7CBB /* 真趣.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A124E90A2170914C009B7CBB /* HFStoryTests */ = {
@@ -279,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14664FF2173658C0058BD03 /* HFHomePageViewController.xib in Resources */,
 				A124E9032170914B009B7CBB /* LaunchScreen.storyboard in Resources */,
 				A124E9002170914B009B7CBB /* Assets.xcassets in Resources */,
 				A124E8FE2170914A009B7CBB /* Main.storyboard in Resources */,
@@ -375,9 +483,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A126292921739DE8006DFC7A /* Target_HomePage.m in Sources */,
 				A124E8FB2170914A009B7CBB /* ViewController.m in Sources */,
+				A146650E217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m in Sources */,
 				A124E9062170914B009B7CBB /* main.m in Sources */,
 				A124E8F82170914A009B7CBB /* AppDelegate.m in Sources */,
+				A14664F821735BB40058BD03 /* HFUserModel.m in Sources */,
+				A14664FE2173658C0058BD03 /* HFHomePageViewController.m in Sources */,
+				A14664F421723DCD0058BD03 /* HFUIStoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +670,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HaiFang.HFStory;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "真趣";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -575,7 +688,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HaiFang.HFStory;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "真趣";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

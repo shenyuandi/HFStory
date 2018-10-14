@@ -16,6 +16,8 @@ target 'HFStory' do
     inherit! :search_paths
     # Pods for testing
   end
-pod ‘ASIHTTPRequest'
+pod ‘AFNetworking'
+pod 'ReactiveObjC'
+pod 'CTMediator'
 
 end
