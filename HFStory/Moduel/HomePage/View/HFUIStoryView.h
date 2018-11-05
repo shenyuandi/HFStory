@@ -7,40 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <YYLabel.h>
+#import "HFStorySectionView.h"
+#import "HFStoryViewModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HFUIStoryView : UIView
-@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
-
-/**
- 是否是新浪会员
- */
-@property (weak, nonatomic) IBOutlet UILabel *storyTitleLabel;
-
+@interface HFUIStoryView : UITableViewCell
+@property (strong, nonatomic) UIImageView *headerImageView;
+//故事标题
+@property (strong, nonatomic)  UILabel *storyTitleLabel;
 //是否是原创
-@property (weak, nonatomic) IBOutlet UIImageView *isOriginalImageView;
+@property (strong, nonatomic)  UIImageView *originalImageView;
 
 /**
  昵称
  */
-@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
+@property (strong, nonatomic) UILabel *nickNameLabel;
 
 /**
  发表时间
  */
-@property (weak, nonatomic) IBOutlet UILabel *creatTimeLabel;
+@property (strong, nonatomic)  YYLabel *creatTimeLabel;
 
 /**
 故事开头
  */
-@property (weak, nonatomic) IBOutlet UILabel *storyBeginningLabel;
-//故事结尾
-@property (weak, nonatomic) IBOutlet UILabel *storyEnddingLabel;
-
-@property (weak, nonatomic) IBOutlet UIButton *likeBtn;
-@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
-@property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+@property (strong, nonatomic)  UIButton *likeBtn;
+@property (strong, nonatomic)  UIButton *shareBtn;
+@property (strong, nonatomic)  UIButton *commentBtn;
+-(void)setViewModel:(HFStoryViewModel*) storyViewModel;
 @end
 
 NS_ASSUME_NONNULL_END

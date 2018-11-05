@@ -7,9 +7,9 @@
 //
 
 #import "CTMediator+CTMediatorModuleHomePage.h"
-NSString * const kCTMediatorTargetHomePage = @"HFHomePageViewController";
+NSString * const kCTMediatorTargetHomePage = @"HFHomePage";
 
-NSString * const kCTMediatorActionHomePageController = @"nativeHomePageController";
+NSString * const kCTMediatorActionHomePageController = @"nativeHomePageViewController";
 NSString * const kCTMediatorActionNativePresentImage = @"nativePresentImage";
 NSString * const kCTMediatorActionNativeNoImage = @"nativeNoImage";
 NSString * const kCTMediatorActionShowAlert = @"showAlert";

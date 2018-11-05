@@ -7,24 +7,60 @@
 //
 
 #import "ViewController.h"
-#import "ModuelCategory/HomePage/CTMediator+CTMediatorModuleHomePage.h"
+#import "CTMediator+CTMediatorModuleHomePage.h"
+#import "HFHomeNavigtionBar.h"
+#import <UIView+LayoutMethods.h>
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self setUpNavigationBar];
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+
+   // [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+   // [self setNeedsStatusBarAppearanceUpdate];
     UIViewController *viewController = [[CTMediator sharedInstance] CTMediator_viewControllerForHomePage];
-    
-    // 获得view controller之后，在这种场景下，到底push还是present，其实是要由使用者决定的，mediator只要给出view controller的实例就好了
-    [self presentViewController:viewController animated:YES completion:nil];
+  // [self presentViewController:viewController animated:NO completion:nil];
+    [self pushViewController:viewController animated:NO];
+}
+- (void)setUpNavigationBar {
+    HFHomeNavigationBar *navBar = [[HFHomeNavigationBar alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 44)];
+    [self setValue:navBar forKeyPath:@"navigationBar"];
+}
+
+#pragma mark - UINavigationControllerDelegate
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)] && animated == YES) {
+        self.interactivePopGestureRecognizer.enabled = NO;
+    }
+    [super pushViewController:viewController animated:animated];
+}
+- (NSArray<UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated {
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)] && animated == YES) {
+        self.interactivePopGestureRecognizer.enabled = NO;
+    }
+    return [super popToRootViewControllerAnimated:animated];
+}
+- (NSArray<UIViewController *> *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)] && animated == YES) {
+        self.interactivePopGestureRecognizer.enabled = NO;
+    }
+    return [super popToViewController:viewController animated:animated];
+}
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        if (navigationController.childViewControllers.count == 1) {
+            self.interactivePopGestureRecognizer.enabled = NO;
+        } else {
+            self.interactivePopGestureRecognizer.enabled = YES;
+        }
+    }
 }
 
 @end

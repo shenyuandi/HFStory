@@ -11,8 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Target_HomePage : NSObject
-- (UIViewController *)Action_HFHomePageViewController:(NSDictionary *)params;
+@interface Target_HFHomePage : NSObject
+- (UIViewController *)Action_nativeHomePageViewController:(NSDictionary *)params;
 
 @end
 
