@@ -28,6 +28,8 @@ typedef enum : NSUInteger {
     UIImageView *_weatherImageView;
     
     //内容视图
+    
+    HFUIStoryView *_storyView;
     UIButton *_userButton;
     CGPoint _lastOffset;
     
@@ -126,6 +128,16 @@ typedef enum : NSUInteger {
 }
 
 #pragma mark - getter
+-(UITableViewCell*)storyView
+{
+
+    if (!_storyView) {
+        HFUIStoryView *cell = [[HFUIStoryView alloc] init];
+        _storyView = cell;
+    }
+    
+    return _storyView;
+}
 -(UIImageView*)backGroundImageView
 {
     if (!_backGroundImageView) {
@@ -211,17 +223,16 @@ typedef enum : NSUInteger {
     UITableView *tempTableView = [[UITableView alloc] init];
     tempTableView.showsVerticalScrollIndicator = NO;
     [tempTableView   assemblyByReuseIdentifier:@"HFUIStoryView" withAssemblyBlock:^(HFUIStoryView *cell, HFStoryViewModel *modelView, NSIndexPath *indexPath) {
-        cell.ct_height = 0;
-        //[cell setViewModel:modelView];
+        [cell setViewModel:modelView];
+    }];
+    [tempTableView setHeightForRowAtIndexPath:^CGFloat(UITableView *tableView, NSIndexPath *indexPath) {
+        return  [tableView.dy_agent tableView:tableView cellForRowAtIndexPath:indexPath].ct_height;
     }];
 //    [tempTableView setNumberOfRowsInSection:^NSInteger(UITableView *tableView, NSInteger section) {
 //        return 1;
 //    }];
 //    [tempTableView setHeightForFooterInSection:^CGFloat(UITableView *tableView, NSInteger section) {
 //        return 32;
-//    }];
-//    [tempTableView setNumberOfSectionsInTableView:^NSInteger(UITableView *tableView) {
-//        return 2;
 //    }];
     tempTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [tempTableView setBackgroundColor:[UIColor colorWithRed:32.0/255 green:59.0/255 blue:93.0/255 alpha:1]];
