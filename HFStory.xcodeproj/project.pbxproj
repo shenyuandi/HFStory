@@ -24,6 +24,20 @@
 		A1029DB0217DD5AB0037224A /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = A1029D9C217DD5AB0037224A /* UIImage+Render.m */; };
 		A1029DB1217DD5AB0037224A /* UITextView+CWLineSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = A1029DA1217DD5AB0037224A /* UITextView+CWLineSpacing.m */; };
 		A1029DB5217F4F700037224A /* HFStorySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1029DB4217F4F700037224A /* HFStorySectionView.m */; };
+		A107EB7621942FEB00771374 /* HFStoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A107EB7521942FEB00771374 /* HFStoryHeaderView.m */; };
+		A108965721930E5100D65B27 /* HFHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A108965621930E5100D65B27 /* HFHomeTableViewController.m */; };
+		A10F8B99219F0AF5006E5374 /* HFHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F8B98219F0AF5006E5374 /* HFHomeListModel.m */; };
+		A10F9A9A21B19E8F001F69F4 /* HFPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10F9A9921B19E8F001F69F4 /* HFPublishViewController.xib */; };
+		A11246BD219C72BD00C0F81E /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A11246A6219C72BC00C0F81E /* GTMBase64.m */; };
+		A11246BE219C72BD00C0F81E /* LCdes.m in Sources */ = {isa = PBXBuildFile; fileRef = A11246A9219C72BD00C0F81E /* LCdes.m */; };
+		A112A26321B279F900BA2529 /* HFPublishToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A112A26221B279F900BA2529 /* HFPublishToolbar.m */; };
+		A112A26A21B2A5D000BA2529 /* HFPublishToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A112A26921B2A5D000BA2529 /* HFPublishToolbar.xib */; };
+		A112A26D21B2BED700BA2529 /* HFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A112A26C21B2BED700BA2529 /* HFTextView.m */; };
+		A112BEBE21B0334A009BA9F0 /* HFPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A112BEBD21B0334A009BA9F0 /* HFPublishViewController.m */; };
+		A1143AA221A7FA27004B18C2 /* ONENavigationBarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A1143AA021A7FA27004B18C2 /* ONENavigationBarTool.m */; };
+		A1187D3E21A29D6A00AB9F77 /* ONEDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A1187D3C21A29D6A00AB9F77 /* ONEDateTool.m */; };
+		A1187D4321A3075D00AB9F77 /* HFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1187D4221A3075D00AB9F77 /* HFLoginViewController.m */; };
+		A1187D4721A31D7300AB9F77 /* HFUserCentreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1187D4621A31D7300AB9F77 /* HFUserCentreViewController.m */; };
 		A124E8F82170914A009B7CBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E8F72170914A009B7CBB /* AppDelegate.m */; };
 		A124E8FB2170914A009B7CBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E8FA2170914A009B7CBB /* ViewController.m */; };
 		A124E8FE2170914A009B7CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A124E8FC2170914A009B7CBB /* Main.storyboard */; };
@@ -34,12 +48,18 @@
 		A124E91B2170914C009B7CBB /* HFStoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A124E91A2170914C009B7CBB /* HFStoryUITests.m */; };
 		A126292921739DE8006DFC7A /* Target_HFHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A126292821739DE8006DFC7A /* Target_HFHomePage.m */; };
 		A1289D282181D02F00BFE54C /* HFHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1289D272181D02F00BFE54C /* HFHomeViewModel.m */; };
+		A12E2B4821981677004BB45E /* ONEHomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12E2B4621981677004BB45E /* ONEHomeNavigationController.m */; };
+		A12E2B4A219819CB004BB45E /* HFHomeNavigationTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12E2B49219819CB004BB45E /* HFHomeNavigationTitleView.xib */; };
+		A12E2B5621993D52004BB45E /* HeWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12E2B5521993D52004BB45E /* HeWeather.framework */; };
 		A14664F421723DCD0058BD03 /* HFUIStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14664F321723DCD0058BD03 /* HFUIStoryView.m */; };
 		A14664F821735BB40058BD03 /* HFUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A14664F721735BB40058BD03 /* HFUserModel.m */; };
 		A14664FE2173658C0058BD03 /* HFHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14664FC2173658C0058BD03 /* HFHomePageViewController.m */; };
 		A146650E217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A146650D217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m */; };
+		A16453EC21A3B0DF00CF28D2 /* ONELaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16453EA21A3B0DF00CF28D2 /* ONELaunchController.m */; };
+		A16453EF21A3B19000CF28D2 /* ONEMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16453ED21A3B18F00CF28D2 /* ONEMainTabBarController.m */; };
 		A17EA0912176DBA600C1A340 /* HFStoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A17EA0902176DBA600C1A340 /* HFStoryViewModel.m */; };
 		A17EA0942176DBC100C1A340 /* HFStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A17EA0932176DBC100C1A340 /* HFStoryModel.m */; };
+		A18255C321AEB00A00B66548 /* HFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A18255C221AEB00A00B66548 /* HFAboutViewController.m */; };
 		A1FE0B38217DB6E700964D29 /* HFHomeNavigtionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE0B37217DB6E700964D29 /* HFHomeNavigtionBar.m */; };
 		AB78B5EF652FFD65D5D3E690 /* libPods-HFStoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF54368F5E7CDE519FA0CCD /* libPods-HFStoryTests.a */; };
 		CCFAF4CF049E80E448C3717C /* libPods-HFStory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD174346248597DF06BF7CC /* libPods-HFStory.a */; };
@@ -105,7 +125,34 @@
 		A1029DA6217DD5AB0037224A /* CALayer+CWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+CWAnimation.h"; sourceTree = "<group>"; };
 		A1029DB3217F4F700037224A /* HFStorySectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFStorySectionView.h; sourceTree = "<group>"; };
 		A1029DB4217F4F700037224A /* HFStorySectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFStorySectionView.m; sourceTree = "<group>"; };
-		A124E8F32170914A009B7CBB /* 真趣.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "真趣.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A107EB7421942FEB00771374 /* HFStoryHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFStoryHeaderView.h; sourceTree = "<group>"; };
+		A107EB7521942FEB00771374 /* HFStoryHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFStoryHeaderView.m; sourceTree = "<group>"; };
+		A108965521930E5100D65B27 /* HFHomeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFHomeTableViewController.h; sourceTree = "<group>"; };
+		A108965621930E5100D65B27 /* HFHomeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHomeTableViewController.m; sourceTree = "<group>"; };
+		A10F8B97219F0AF5006E5374 /* HFHomeListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFHomeListModel.h; sourceTree = "<group>"; };
+		A10F8B98219F0AF5006E5374 /* HFHomeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHomeListModel.m; sourceTree = "<group>"; };
+		A10F9A9921B19E8F001F69F4 /* HFPublishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HFPublishViewController.xib; sourceTree = "<group>"; };
+		A11246A6219C72BC00C0F81E /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		A11246A7219C72BC00C0F81E /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		A11246A8219C72BC00C0F81E /* LCdes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCdes.h; sourceTree = "<group>"; };
+		A11246A9219C72BD00C0F81E /* LCdes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCdes.m; sourceTree = "<group>"; };
+		A11246BC219C72BD00C0F81E /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		A112A26121B279F900BA2529 /* HFPublishToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFPublishToolbar.h; sourceTree = "<group>"; };
+		A112A26221B279F900BA2529 /* HFPublishToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFPublishToolbar.m; sourceTree = "<group>"; };
+		A112A26921B2A5D000BA2529 /* HFPublishToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HFPublishToolbar.xib; sourceTree = "<group>"; };
+		A112A26B21B2BED700BA2529 /* HFTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFTextView.h; sourceTree = "<group>"; };
+		A112A26C21B2BED700BA2529 /* HFTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFTextView.m; sourceTree = "<group>"; };
+		A112BEBC21B0334A009BA9F0 /* HFPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFPublishViewController.h; sourceTree = "<group>"; };
+		A112BEBD21B0334A009BA9F0 /* HFPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFPublishViewController.m; sourceTree = "<group>"; };
+		A1143AA021A7FA27004B18C2 /* ONENavigationBarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONENavigationBarTool.m; sourceTree = "<group>"; };
+		A1143AA121A7FA27004B18C2 /* ONENavigationBarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONENavigationBarTool.h; sourceTree = "<group>"; };
+		A1187D3C21A29D6A00AB9F77 /* ONEDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONEDateTool.m; sourceTree = "<group>"; };
+		A1187D3D21A29D6A00AB9F77 /* ONEDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONEDateTool.h; sourceTree = "<group>"; };
+		A1187D4121A3075D00AB9F77 /* HFLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFLoginViewController.h; sourceTree = "<group>"; };
+		A1187D4221A3075D00AB9F77 /* HFLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFLoginViewController.m; sourceTree = "<group>"; };
+		A1187D4521A31D7300AB9F77 /* HFUserCentreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFUserCentreViewController.h; sourceTree = "<group>"; };
+		A1187D4621A31D7300AB9F77 /* HFUserCentreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFUserCentreViewController.m; sourceTree = "<group>"; };
+		A124E8F32170914A009B7CBB /* 夜飞鹊.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "夜飞鹊.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A124E8F62170914A009B7CBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A124E8F72170914A009B7CBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A124E8F92170914A009B7CBB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -125,6 +172,10 @@
 		A126292821739DE8006DFC7A /* Target_HFHomePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_HFHomePage.m; sourceTree = "<group>"; };
 		A1289D262181D02F00BFE54C /* HFHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFHomeViewModel.h; sourceTree = "<group>"; };
 		A1289D272181D02F00BFE54C /* HFHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHomeViewModel.m; sourceTree = "<group>"; };
+		A12E2B4621981677004BB45E /* ONEHomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONEHomeNavigationController.m; sourceTree = "<group>"; };
+		A12E2B4721981677004BB45E /* ONEHomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONEHomeNavigationController.h; sourceTree = "<group>"; };
+		A12E2B49219819CB004BB45E /* HFHomeNavigationTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFHomeNavigationTitleView.xib; sourceTree = "<group>"; };
+		A12E2B5521993D52004BB45E /* HeWeather.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HeWeather.framework; sourceTree = "<group>"; };
 		A14664F221723DCD0058BD03 /* HFUIStoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFUIStoryView.h; sourceTree = "<group>"; };
 		A14664F321723DCD0058BD03 /* HFUIStoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFUIStoryView.m; sourceTree = "<group>"; };
 		A14664F621735BB40058BD03 /* HFUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFUserModel.h; sourceTree = "<group>"; };
@@ -133,10 +184,17 @@
 		A14664FC2173658C0058BD03 /* HFHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHomePageViewController.m; sourceTree = "<group>"; };
 		A146650C217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorModuleHomePage.h"; sourceTree = "<group>"; };
 		A146650D217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorModuleHomePage.m"; sourceTree = "<group>"; };
+		A16453EA21A3B0DF00CF28D2 /* ONELaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONELaunchController.m; sourceTree = "<group>"; };
+		A16453EB21A3B0DF00CF28D2 /* ONELaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONELaunchController.h; sourceTree = "<group>"; };
+		A16453ED21A3B18F00CF28D2 /* ONEMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONEMainTabBarController.m; sourceTree = "<group>"; };
+		A16453EE21A3B18F00CF28D2 /* ONEMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONEMainTabBarController.h; sourceTree = "<group>"; };
+		A16453F421A4389300CF28D2 /* 夜飞鹊.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "夜飞鹊.entitlements"; sourceTree = "<group>"; };
 		A17EA08F2176DBA600C1A340 /* HFStoryViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFStoryViewModel.h; sourceTree = "<group>"; };
 		A17EA0902176DBA600C1A340 /* HFStoryViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFStoryViewModel.m; sourceTree = "<group>"; };
 		A17EA0922176DBC100C1A340 /* HFStoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFStoryModel.h; sourceTree = "<group>"; };
 		A17EA0932176DBC100C1A340 /* HFStoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFStoryModel.m; sourceTree = "<group>"; };
+		A18255C121AEB00A00B66548 /* HFAboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFAboutViewController.h; sourceTree = "<group>"; };
+		A18255C221AEB00A00B66548 /* HFAboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFAboutViewController.m; sourceTree = "<group>"; };
 		A1FE0B36217DB6E700964D29 /* HFHomeNavigtionBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFHomeNavigtionBar.h; sourceTree = "<group>"; };
 		A1FE0B37217DB6E700964D29 /* HFHomeNavigtionBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHomeNavigtionBar.m; sourceTree = "<group>"; };
 		B9B3463CDCC60F3F18ADBDC1 /* Pods-HFStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFStory.release.xcconfig"; path = "Target Support Files/Pods-HFStory/Pods-HFStory.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12E2B5621993D52004BB45E /* HeWeather.framework in Frameworks */,
 				CCFAF4CF049E80E448C3717C /* libPods-HFStory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +234,7 @@
 		96ABF7A8FB0EC28C875CB250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A12E2B5521993D52004BB45E /* HeWeather.framework */,
 				1FD174346248597DF06BF7CC /* libPods-HFStory.a */,
 				5AF54368F5E7CDE519FA0CCD /* libPods-HFStoryTests.a */,
 				9D113DE02B8197287D65B677 /* libPods-HFStoryUITests.a */,
@@ -220,6 +280,79 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		A112464B219C327D00C0F81E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A11246A7219C72BC00C0F81E /* GTMBase64.h */,
+				A11246A6219C72BC00C0F81E /* GTMBase64.m */,
+				A11246BC219C72BD00C0F81E /* GTMDefines.h */,
+				A11246A8219C72BC00C0F81E /* LCdes.h */,
+				A11246A9219C72BD00C0F81E /* LCdes.m */,
+				A1187D3D21A29D6A00AB9F77 /* ONEDateTool.h */,
+				A1187D3C21A29D6A00AB9F77 /* ONEDateTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A112A26421B279FF00BA2529 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A112A26B21B2BED700BA2529 /* HFTextView.h */,
+				A112A26C21B2BED700BA2529 /* HFTextView.m */,
+				A112A26121B279F900BA2529 /* HFPublishToolbar.h */,
+				A112A26221B279F900BA2529 /* HFPublishToolbar.m */,
+				A112A26921B2A5D000BA2529 /* HFPublishToolbar.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A112A26621B27A1400BA2529 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A112BEBC21B0334A009BA9F0 /* HFPublishViewController.h */,
+				A112BEBD21B0334A009BA9F0 /* HFPublishViewController.m */,
+				A10F9A9921B19E8F001F69F4 /* HFPublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A112BEBB21B03328009BA9F0 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				A112A26621B27A1400BA2529 /* Controller */,
+				A112A26421B279FF00BA2529 /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		A1187D4021A3073E00AB9F77 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				A1187D4121A3075D00AB9F77 /* HFLoginViewController.h */,
+				A1187D4221A3075D00AB9F77 /* HFLoginViewController.m */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		A1187D4421A3082100AB9F77 /* UserCentre */ = {
+			isa = PBXGroup;
+			children = (
+				A1187D4A21A31EB200AB9F77 /* Controller */,
+			);
+			path = UserCentre;
+			sourceTree = "<group>";
+		};
+		A1187D4A21A31EB200AB9F77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1187D4521A31D7300AB9F77 /* HFUserCentreViewController.h */,
+				A1187D4621A31D7300AB9F77 /* HFUserCentreViewController.m */,
+				A18255C121AEB00A00B66548 /* HFAboutViewController.h */,
+				A18255C221AEB00A00B66548 /* HFAboutViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A124E8EA2170914A009B7CBB = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +368,7 @@
 		A124E8F42170914A009B7CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A124E8F32170914A009B7CBB /* 真趣.app */,
+				A124E8F32170914A009B7CBB /* 夜飞鹊.app */,
 				A124E90B2170914C009B7CBB /* HFStoryTests.xctest */,
 				A124E9162170914C009B7CBB /* HFStoryUITests.xctest */,
 			);
@@ -245,11 +378,17 @@
 		A124E8F52170914A009B7CBB /* HFStory */ = {
 			isa = PBXGroup;
 			children = (
+				A16453F421A4389300CF28D2 /* 夜飞鹊.entitlements */,
+				A112464B219C327D00C0F81E /* Tool */,
 				A1466506217378170058BD03 /* ModuelCategory */,
 				A14664F521735B5A0058BD03 /* NetWorkService */,
 				A1E5EAD82171F69900832A44 /* Moduel */,
 				A124E8F62170914A009B7CBB /* AppDelegate.h */,
 				A124E8F72170914A009B7CBB /* AppDelegate.m */,
+				A16453EB21A3B0DF00CF28D2 /* ONELaunchController.h */,
+				A16453EA21A3B0DF00CF28D2 /* ONELaunchController.m */,
+				A16453EE21A3B18F00CF28D2 /* ONEMainTabBarController.h */,
+				A16453ED21A3B18F00CF28D2 /* ONEMainTabBarController.m */,
 				A124E8F92170914A009B7CBB /* ViewController.h */,
 				A124E8FA2170914A009B7CBB /* ViewController.m */,
 				A1029D83217DC9230037224A /* HFStoryPrefixHeader.pch */,
@@ -318,6 +457,9 @@
 		A1E5EAD82171F69900832A44 /* Moduel */ = {
 			isa = PBXGroup;
 			children = (
+				A112BEBB21B03328009BA9F0 /* Publish */,
+				A1187D4421A3082100AB9F77 /* UserCentre */,
+				A1187D4021A3073E00AB9F77 /* LoginPage */,
 				A1E5EAD92171F85700832A44 /* HomePage */,
 			);
 			path = Moduel;
@@ -332,6 +474,8 @@
 				A1E5EADF21720D1700832A44 /* Controller */,
 				A1E5EADE21720D0200832A44 /* ViewModel */,
 				A1E5EADA2171F87200832A44 /* Model */,
+				A12E2B4721981677004BB45E /* ONEHomeNavigationController.h */,
+				A12E2B4621981677004BB45E /* ONEHomeNavigationController.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -343,6 +487,8 @@
 				A14664F721735BB40058BD03 /* HFUserModel.m */,
 				A17EA0922176DBC100C1A340 /* HFStoryModel.h */,
 				A17EA0932176DBC100C1A340 /* HFStoryModel.m */,
+				A10F8B97219F0AF5006E5374 /* HFHomeListModel.h */,
+				A10F8B98219F0AF5006E5374 /* HFHomeListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,14 +496,19 @@
 		A1E5EADC2171F8BF00832A44 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1143AA121A7FA27004B18C2 /* ONENavigationBarTool.h */,
+				A1143AA021A7FA27004B18C2 /* ONENavigationBarTool.m */,
 				A1029DB3217F4F700037224A /* HFStorySectionView.h */,
 				A1029DB4217F4F700037224A /* HFStorySectionView.m */,
+				A107EB7421942FEB00771374 /* HFStoryHeaderView.h */,
+				A107EB7521942FEB00771374 /* HFStoryHeaderView.m */,
 				A14664F221723DCD0058BD03 /* HFUIStoryView.h */,
 				A14664F321723DCD0058BD03 /* HFUIStoryView.m */,
 				A1FE0B36217DB6E700964D29 /* HFHomeNavigtionBar.h */,
 				A1FE0B37217DB6E700964D29 /* HFHomeNavigtionBar.m */,
 				A1029D80217DC6800037224A /* HFHomeNavigationTitleView.h */,
 				A1029D81217DC6800037224A /* HFHomeNavigationTitleView.m */,
+				A12E2B49219819CB004BB45E /* HFHomeNavigationTitleView.xib */,
 				A1029D84217DD2CE0037224A /* CWCalendarLabel */,
 				A1029D88217DD3460037224A /* HFHomeNavigationBarTitleTextView.h */,
 				A1029D89217DD3460037224A /* HFHomeNavigationBarTitleTextView.m */,
@@ -383,6 +534,8 @@
 			children = (
 				A14664FB2173658C0058BD03 /* HFHomePageViewController.h */,
 				A14664FC2173658C0058BD03 /* HFHomePageViewController.m */,
+				A108965521930E5100D65B27 /* HFHomeTableViewController.h */,
+				A108965621930E5100D65B27 /* HFHomeTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +564,7 @@
 				A124E8EF2170914A009B7CBB /* Sources */,
 				A124E8F02170914A009B7CBB /* Frameworks */,
 				A124E8F12170914A009B7CBB /* Resources */,
+				3DC6C82FCFD6189E14A30B57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -418,7 +572,7 @@
 			);
 			name = HFStory;
 			productName = HFStory;
-			productReference = A124E8F32170914A009B7CBB /* 真趣.app */;
+			productReference = A124E8F32170914A009B7CBB /* 夜飞鹊.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A124E90A2170914C009B7CBB /* HFStoryTests */ = {
@@ -470,6 +624,17 @@
 				TargetAttributes = {
 					A124E8F22170914A009B7CBB = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					A124E90A2170914C009B7CBB = {
 						CreatedOnToolsVersion = 10.0;
@@ -507,8 +672,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A124E9032170914B009B7CBB /* LaunchScreen.storyboard in Resources */,
+				A12E2B4A219819CB004BB45E /* HFHomeNavigationTitleView.xib in Resources */,
 				A124E9002170914B009B7CBB /* Assets.xcassets in Resources */,
 				A124E8FE2170914A009B7CBB /* Main.storyboard in Resources */,
+				A10F9A9A21B19E8F001F69F4 /* HFPublishViewController.xib in Resources */,
+				A112A26A21B2A5D000BA2529 /* HFPublishToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +697,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3DC6C82FCFD6189E14A30B57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HFStory/Pods-HFStory-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HFStory/Pods-HFStory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		40B7D96D4AE3E9E1090C43E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,35 +796,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1187D4321A3075D00AB9F77 /* HFLoginViewController.m in Sources */,
 				A126292921739DE8006DFC7A /* Target_HFHomePage.m in Sources */,
 				A1029DB5217F4F700037224A /* HFStorySectionView.m in Sources */,
+				A112BEBE21B0334A009BA9F0 /* HFPublishViewController.m in Sources */,
 				A1029DA9217DD5AB0037224A /* UILabel+CWLineSpacing.m in Sources */,
 				A1029D87217DD2CF0037224A /* CWCalendarLabel.m in Sources */,
+				A10F8B99219F0AF5006E5374 /* HFHomeListModel.m in Sources */,
 				A1029DAD217DD5AB0037224A /* NSString+CWTranslate.m in Sources */,
 				A1029DAC217DD5AB0037224A /* CALayer+CWAnimation.m in Sources */,
+				A112A26321B279F900BA2529 /* HFPublishToolbar.m in Sources */,
+				A18255C321AEB00A00B66548 /* HFAboutViewController.m in Sources */,
 				A1029DAA217DD5AB0037224A /* UIColor+Hex.m in Sources */,
 				A1FE0B38217DB6E700964D29 /* HFHomeNavigtionBar.m in Sources */,
+				A11246BD219C72BD00C0F81E /* GTMBase64.m in Sources */,
 				A124E8FB2170914A009B7CBB /* ViewController.m in Sources */,
 				A1029D82217DC6800037224A /* HFHomeNavigationTitleView.m in Sources */,
+				A11246BE219C72BD00C0F81E /* LCdes.m in Sources */,
+				A1187D3E21A29D6A00AB9F77 /* ONEDateTool.m in Sources */,
 				A1029DB0217DD5AB0037224A /* UIImage+Render.m in Sources */,
 				A146650E217388500058BD03 /* CTMediator+CTMediatorModuleHomePage.m in Sources */,
 				A1029DAF217DD5AB0037224A /* UIColor+CWQuickCreate.m in Sources */,
+				A108965721930E5100D65B27 /* HFHomeTableViewController.m in Sources */,
 				A1029DAB217DD5AB0037224A /* UIButton+CWColor.m in Sources */,
 				A1029D8A217DD3460037224A /* HFHomeNavigationBarTitleTextView.m in Sources */,
+				A112A26D21B2BED700BA2529 /* HFTextView.m in Sources */,
 				A124E9062170914B009B7CBB /* main.m in Sources */,
 				A1029DA8217DD5AB0037224A /* UIImageView+ONEAddTag.m in Sources */,
 				A124E8F82170914A009B7CBB /* AppDelegate.m in Sources */,
 				A1029DA7217DD5AB0037224A /* UIView+CWFrame.m in Sources */,
 				A1029D7F217DBCF70037224A /* HFHomeWeatherViewModel.m in Sources */,
+				A1187D4721A31D7300AB9F77 /* HFUserCentreViewController.m in Sources */,
 				A17EA0942176DBC100C1A340 /* HFStoryModel.m in Sources */,
 				A1029DB1217DD5AB0037224A /* UITextView+CWLineSpacing.m in Sources */,
+				A16453EC21A3B0DF00CF28D2 /* ONELaunchController.m in Sources */,
 				A14664F821735BB40058BD03 /* HFUserModel.m in Sources */,
+				A107EB7621942FEB00771374 /* HFStoryHeaderView.m in Sources */,
 				A14664FE2173658C0058BD03 /* HFHomePageViewController.m in Sources */,
 				A1289D282181D02F00BFE54C /* HFHomeViewModel.m in Sources */,
 				A1029D8C217DD4B10037224A /* HFConst.m in Sources */,
 				A17EA0912176DBA600C1A340 /* HFStoryViewModel.m in Sources */,
 				A14664F421723DCD0058BD03 /* HFUIStoryView.m in Sources */,
+				A1143AA221A7FA27004B18C2 /* ONENavigationBarTool.m in Sources */,
 				A1029DAE217DD5AB0037224A /* NSString+ONEComponents.m in Sources */,
+				A16453EF21A3B19000CF28D2 /* ONEMainTabBarController.m in Sources */,
+				A12E2B4821981677004BB45E /* ONEHomeNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,8 +1012,13 @@
 			baseConfigurationReference = E8B722DD4A1622317E0BC270 /* Pods-HFStory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HFStory/夜飞鹊.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6MVGL3XP6X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = HFStory/HFStoryPrefixHeader.pch;
 				INFOPLIST_FILE = HFStory/Info.plist;
@@ -812,8 +1027,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = HaiFang.HFStory;
-				PRODUCT_NAME = "真趣";
+				PRODUCT_NAME = "夜飞鹊";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -823,8 +1042,13 @@
 			baseConfigurationReference = B9B3463CDCC60F3F18ADBDC1 /* Pods-HFStory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HFStory/夜飞鹊.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6MVGL3XP6X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = HFStory/HFStoryPrefixHeader.pch;
 				INFOPLIST_FILE = HFStory/Info.plist;
@@ -833,8 +1057,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = HaiFang.HFStory;
-				PRODUCT_NAME = "真趣";
+				PRODUCT_NAME = "夜飞鹊";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

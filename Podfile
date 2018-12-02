@@ -30,5 +30,9 @@ target 'HFStory' do
   pod 'YYText'
   #图片
   pod 'YYWebImage'
-  pod 'DYKit'
+  pod 'JPush'
+  pod 'MJRefresh'
+  pod 'KLCPopup'
+  pod 'IQKeyboardManager'
+  pod 'TZImagePickerController'
 end

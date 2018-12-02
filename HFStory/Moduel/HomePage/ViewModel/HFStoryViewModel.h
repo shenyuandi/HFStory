@@ -9,9 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "HFStoryModel.h"
 NS_ASSUME_NONNULL_BEGIN
+typedef enum :NSInteger{
+    HFSectionTypeHeader,
+    HFSectionTypeContent,
+    HFSectionTypeTail,
+    HFSectionTypeBlank
+}HFSectionType;
+
+
 @interface HFStoryElementViewModel : NSObject
-@property(strong,nonatomic) NSString *type;
-@property(strong,nonatomic) NSString *content;
+@property(strong,nonatomic,readonly) HFStoryElementModel *model;
 -(instancetype)initWithModel:(HFStoryElementModel*)model;
 @end
 
@@ -19,28 +26,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface HFStorySectionViewModel : NSObject
-@property(nonatomic,strong,readonly)HFStorySectionModel *storySectionModel;
+@property(nonatomic,assign)HFSectionType sectionType;
+-(instancetype)initWithArray:(NSArray*)array;
 @property (nonatomic, strong, readonly) NSMutableArray<HFStoryElementViewModel*> *storyElementViewModleArray;
--(instancetype)initWithModel:(HFStorySectionModel*)model;
-@property(nonatomic,assign)NSInteger isHiden;
 @end
-
-
 
 
 
 @interface HFStoryViewModel : NSObject
 @property(nonatomic,strong,readonly)HFStoryModel *storyModel;
-@property (nonatomic, strong,readonly) NSString *nickNameString;
-@property (nonatomic, strong,readonly) NSString *creatTimeString;
-@property (nonatomic, strong,readonly) NSString *stroyTitleString;
-@property (nonatomic,strong) NSString *date;
-@property (strong, nonatomic) NSURL *headerImageUrl;
-//是否是原创
-@property (assign, nonatomic)  BOOL  isOriginal;
-@property (nonatomic, strong, readonly) NSMutableArray<HFStorySectionViewModel*> *storySectionViewModleArray;
-@property (nonatomic, strong, readonly) NSMutableArray<HFStorySectionViewModel*> *visbleStorySectionViewModleArray;
--(instancetype)initWithDate:(NSString *)date;
+@property(nonatomic,strong,readonly)NSString *creatTimeString;
+@property(nonatomic,strong,readonly)NSString *commentNumberString;
+@property(nonatomic,strong,readonly)NSString *likeNumberString;
+@property(nonatomic,strong,readonly)HFStorySectionViewModel *particulars;
+@property(nonatomic,strong,readonly)HFStorySectionViewModel *outlines;
++(instancetype)viewModelWithModel:(HFStoryModel*)model;
 @end    
 
 NS_ASSUME_NONNULL_END

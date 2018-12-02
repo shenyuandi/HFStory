@@ -10,169 +10,193 @@
 #import <YYWebImage.h>
 #import <UIView+LayoutMethods.h>
 #import "HFStorySectionView.h"
-#import <DYKit.h>
 @interface HFUIStoryView()
-@property (strong, nonatomic) UITableView *containerTableview;
 @end
 @implementation HFUIStoryView
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self= [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    [self setBackgroundColor:[UIColor whiteColor]];
-    self.layer.cornerRadius = 8;
-    self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOpacity = 0.8;
-    self.layer.shadowOffset = CGSizeMake(2, 2);
-    self.ct_height = 62+85;
-    _containerTableview = [[UITableView alloc] initWithFrame:CGRectMake(0,62, self.ct_width, 600)];
-    [_containerTableview setBackgroundColor:[UIColor yellowColor]];
-    [self addSubview:_containerTableview];
-    [_containerTableview assemblyByReuseIdentifier:@"HFStorySectionView" withAssemblyBlock:^(HFStorySectionView* cell, HFStorySectionViewModel *model, NSIndexPath *indexPath) {
-        [cell setViewModel:model];;
-        self.ct_height += cell.ct_height;
-    }];
-    [_containerTableview setHeightForRowAtIndexPath:^CGFloat(UITableView *tableView, NSIndexPath *indexPath) {
-        return [tableView.dy_agent tableView:tableView cellForRowAtIndexPath:indexPath].ct_height;
-    }];
-//    [[_containerTableview didSelectRowAtIndexPathSignal] subscribeNext:^(RACTuple* x) {
-//        UITableView *tv =x.first;
-//        NSIndexPath *indexPath  = x.second;
-//        if (indexPath.section == [tv numberOfSections]-1) {
-//            if (indexPath.row == [tv numberOfRowsInSection:indexPath.section]) {
-//                NSLog(@"sss");
-//            }
-//        }
-//       
-//    }];
+    if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        self.ct_height = 0;
+        self.backgroundColor = [UIColor clearColor];
+        
+        self.foregroundView = [self createForegroundView];
+        self.containerView = [self createContainerView];
+        self.containerView.alpha = 0;
+        self.interView.alpha = 0;
+    }
+
     return self;
 }
 -(void)setViewModel:(HFStoryViewModel*) storyViewModel
 {
-    _containerTableview.dy_data = storyViewModel.storySectionViewModleArray;
-    self.nickNameLabel.text = storyViewModel.nickNameString;
-    self.creatTimeLabel.text = storyViewModel.creatTimeString;
-    self.storyTitleLabel.text = storyViewModel.stroyTitleString;
+    [self.beginningSectionView setViewModel:storyViewModel.outlines];
+    
+    
+    //重新设置前景视图的高度
+    self.foregroundView.ct_height = self.beginningSectionView.ct_height+self.headerView.ct_height+8;
+    
+    [self.enddingSectionView setViewModel:storyViewModel.particulars];
+    self.headerView.nickNameLabel.text = storyViewModel.storyModel.ownerName;
+    self.headerView.creatTimeLabel.text = storyViewModel.creatTimeString;
+
+    [self.commentBtn setTitle:storyViewModel.commentNumberString forState:UIControlStateNormal];
+    [self.likeBtn setTitle:storyViewModel.likeNumberString forState:UIControlStateNormal];
+    
+    
+    self.containerView.ct_height = self.enddingSectionView.ct_height+85;
+    _openHeight = self.foregroundView.ct_height +self.containerView.ct_height+ 17;
+    _closeHeight = self.foregroundView.ct_height+17;
+   // self.ct_height = self.foregroundView.ct_height + self.containerView.ct_height + 8;
 }
 -(void)layoutSubviews
 {
-    [_containerTableview topInContainer:62 shouldResize:NO];
-    [_containerTableview bottomInContainer:85 shouldResize:YES];
-    [_containerTableview fillWidth];
-    [self.originalImageView setFrame:CGRectMake(19, 25, 41, 22)];
-    [self.headerImageView setFrame:CGRectMake(69.5, 22, 26.5, 26.5)];
-    [self.nickNameLabel setFrame:CGRectMake(104, 26, 84, 20)];
-    //  [self layoutLabel:self.creatTimeLabel];
-    [self.creatTimeLabel rightInContainer:20 shouldResize:NO];
-    [self.creatTimeLabel topInContainer:26 shouldResize:NO];
-    [self.creatTimeLabel sizeToFit];
+
+    [self.interView top:-10 FromView:self.foregroundView];
+    [self.interView rightInContainer:17 shouldResize:NO];
+    [self.interView leftInContainer:17 shouldResize:YES];
+    self.interView.ct_height = 30;
+
+    
+    [self.interView widthEqualToView:self.foregroundView];
+    [self.foregroundView topInContainer:8 shouldResize:NO];
+    [self.foregroundView centerXEqualToView:self.contentView];
+    [self.foregroundView rightInContainer:17 shouldResize:NO];
+    [self.foregroundView leftInContainer:17 shouldResize:YES];
+    
+    [self.headerView widthEqualToView:self.foregroundView];
+    
+    [self.containerView top:8 FromView:self.foregroundView];
+    [self.containerView centerXEqualToView:self.contentView];
+    [self.containerView rightInContainer:17 shouldResize:NO];
+    [self.containerView leftInContainer:17 shouldResize:YES];
+    self.containerView.ct_height = self.enddingSectionView.ct_height+85;
+
+    
+    [self.beginningSectionView  top:5 FromView:self.headerView];
+    [self.beginningSectionView  widthEqualToView:self.foregroundView];
+    [self.enddingSectionView  widthEqualToView:self.foregroundView];
+    
     [self.likeBtn bottomInContainer:15.5 shouldResize:NO];
-    [_likeBtn rightInContainer:18.5 shouldResize:NO ];
+    [self.likeBtn setCt_size:CGSizeMake(self.superview.ct_size.width/3, 50)];
+    [_likeBtn rightInContainer:0 shouldResize:NO ];
     [self.shareBtn centerXEqualToView:self];
+    [self.shareBtn sizeEqualToView:self.likeBtn];
     [_shareBtn centerYEqualToView:_likeBtn];
-    [self.commentBtn leftInContainer:18.5 shouldResize:NO ];
+    [self.commentBtn leftInContainer:0 shouldResize:NO ];
     [_commentBtn centerYEqualToView:_likeBtn];
+    [self.commentBtn sizeEqualToView:self.likeBtn];
 }
--(void)layoutLabel:(YYLabel *)label
-{
-    if (label.text) {
-        
-        NSString *string = label.text;
-        //设置多行
-        label.numberOfLines = 0;
-        //这个属性必须设置，多行才有效
-        
-        NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:string];
-        
-        attri.yy_font = [UIFont systemFontOfSize:15];
-        [attri setYy_lineSpacing:9];
-        //用label的attributedText属性来使用富文本
-        label.attributedText = attri;
-        label.textAlignment = NSTextAlignmentLeft;
-        [label setTextVerticalAlignment:YYTextVerticalAlignmentTop];
-        //自动换行，改变label高度，即自适应高度，注音⚠️：多行显示的label，必须设置该属性，否则需自行添加高度
-        label.preferredMaxLayoutWidth = CGRectGetWidth(self.frame) - 30;
-        CGSize maxSize = CGSizeMake(label.preferredMaxLayoutWidth, MAXFLOAT);
-        //计算文本尺寸
-        YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:maxSize text:attri];
-        label.textLayout = layout;
-        CGFloat introHeight = layout.textBoundingSize.height;
-        
-        [label setCt_size:CGSizeMake(maxSize.width, introHeight)];
-    }
+- (void)unfold:(BOOL)value animated:(BOOL)animated completion:(void (^)(void))completion{
+    [self layoutSubviews];
+    [UIView animateWithDuration:0.4 animations:^{
+        self.interView.alpha = value?1:0;
+        self.containerView.alpha = value?1:0;
+    }];
 }
+
+
 #pragma mark - getter
--(UIImageView*)headerImageView
+-(UIView *)interView
 {
-    if (!_headerImageView) {
-        UIImageView *view = [[UIImageView alloc] init];
-        [view setImage:[UIImage imageNamed:@"大"]];
-        _headerImageView = view;
-        [self.contentView addSubview:_headerImageView];
+    if (!_interView) {
+        _interView = [[UIView alloc] init];
+        [_interView setBackgroundColor:[UIColor whiteColor]];
+        [self.contentView insertSubview:_interView atIndex:0];
     }
-    
-    return _headerImageView;
+    return _interView;
 }
--(UILabel *)storyTitleLabel
-{
-    if (!_storyTitleLabel) {
-        UILabel *label = [[UILabel alloc] init];
-        _storyTitleLabel = label;
-        [self.contentView addSubview:_storyTitleLabel];
-    }
-    
-    return _storyTitleLabel;
-    
+- (UIView *)createForegroundView{
+    UIView * foregroundView = [[UIView alloc] initWithFrame:CGRectZero];
+    foregroundView.backgroundColor = [UIColor whiteColor];
+    foregroundView.translatesAutoresizingMaskIntoConstraints = NO;
+    foregroundView.clipsToBounds = YES;
+    foregroundView.layer.cornerRadius = 10;
+    [self.contentView addSubview:foregroundView];
+    [foregroundView layoutIfNeeded];
+    return foregroundView;
 }
--(UIImageView *)originalImageView
-{
-    if (!_originalImageView) {
-        UIImageView *label = [[UIImageView alloc] init];
-        _originalImageView = label;
-        [_originalImageView setImage:[UIImage imageNamed:@"原创"]];
-        [self.contentView addSubview:_originalImageView];
-    }
+
+- (UIView *)createContainerView{
+    UIView * containerView = [[UIView alloc] initWithFrame:CGRectZero];
+    containerView.backgroundColor = [UIColor whiteColor];
+    containerView.translatesAutoresizingMaskIntoConstraints = NO;
+    containerView.clipsToBounds = YES;
+    containerView.layer.cornerRadius = 10;
     
-    return _originalImageView;
+    [containerView addSubview:self.enddingSectionView];
+    [containerView addSubview:self.likeBtn];
+    [containerView addSubview:self.shareBtn];
+    [containerView addSubview:self.commentBtn];
+    [self.contentView addSubview:containerView];
+    
+    [containerView layoutIfNeeded];
+    
+    return containerView;
 }
--(UILabel *)nickNameLabel
+-(HFStoryHeaderView*)headerView
 {
-    if (!_nickNameLabel) {
-        UILabel *label = [[UILabel alloc] init];
-        label.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
-        label.textColor = [UIColor colorWithRed:0/255.0 green:36/255.0 blue:100/255.0 alpha:1/1.0];
-        _nickNameLabel = label;
-        [self.contentView addSubview:_nickNameLabel];
+    if (!_headerView) {
+        HFStoryHeaderView *sectionView = [[HFStoryHeaderView alloc] init];
+        sectionView.ct_height = 65;
+        [sectionView setBackgroundColor:[UIColor whiteColor]];
+        _headerView= sectionView;
+        
+        [self.foregroundView addSubview:_headerView];
     }
     
-    return _nickNameLabel;
+    return _headerView;
 }
--(YYLabel *)creatTimeLabel
+-(HFStorySectionView*)beginningSectionView
 {
-    if (!_creatTimeLabel) {
-        YYLabel *label = [[YYLabel alloc] init];
-        _creatTimeLabel = label;
-        [self addSubview:_creatTimeLabel];
+    if (!_beginningSectionView) {
+        HFStorySectionView *sectionView = [[HFStorySectionView alloc] init];
+        [sectionView widthEqualToView:self];
+        _beginningSectionView = sectionView;
+        [self.foregroundView addSubview:_beginningSectionView];
     }
     
-    return _creatTimeLabel;
+    return _beginningSectionView;
+}
+-(HFStorySectionView*)enddingSectionView
+{
+    if (!_enddingSectionView) {
+        HFStorySectionView *sectionView = [[HFStorySectionView alloc] init];
+        [sectionView widthEqualToView:self];
+        _enddingSectionView = sectionView;
+        [self.containerView addSubview:_enddingSectionView];
+    }
+    
+    return _enddingSectionView;
+}
+-(YYLabel*)storyTileLabel
+{
+    if (!_storyTileLabel) {
+        YYLabel *lable = [[YYLabel alloc] init];
+        _storyTileLabel = lable;
+        [self.containerView addSubview:_storyTileLabel];
+    }
+    return _storyTileLabel;
 }
 -(UIButton*)likeBtn
 {
     if (!_likeBtn) {
         UIButton *btn = [[UIButton alloc] init];
-        NSString *str = @"共鸣(100000)";
+        
         [btn setImage:[UIImage imageNamed:@"爱心"] forState:UIControlStateNormal];
-        [btn setTitle:str forState:UIControlStateNormal];
+        //   [btn setTitle:str forState:UIControlStateNormal];
         btn.titleLabel.font =  [UIFont fontWithName:@"PingFangSC-Regular" size:13.0];
         [btn setTitleColor: [UIColor colorWithRed:0/255.0 green:36/255.0 blue:100/255.0 alpha:1/1.0] forState:UIControlStateNormal];
-        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
         [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 6, 0, 0)];
-        CGSize titleSize = [str sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:btn.titleLabel.font.fontName size:btn.titleLabel.font.pointSize]}];
+        //    CGSize titleSize = [str sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:btn.titleLabel.font.fontName size:btn.titleLabel.font.pointSize]}];
         
-        [btn setCt_size:CGSizeMake(titleSize.width+btn.currentImage.size.width+6, btn.currentImage.size.width)];
-        //btn.hidden= YES;
+        // [btn setCt_size:CGSizeMake(titleSize.width+btn.currentImage.size.width+6, btn.currentImage.size.width)];
         _likeBtn = btn;
-        [self.contentView addSubview:_likeBtn];
+        [self.containerView addSubview:_likeBtn];
     }
     
     return _likeBtn;
@@ -181,19 +205,16 @@
 {
     if (!_shareBtn) {
         UIButton *btn = [[UIButton alloc] init];
-        NSString *str = @"分享(100)";
         [btn setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
-        [btn setTitle:str forState:UIControlStateNormal];
         btn.titleLabel.font =  [UIFont fontWithName:@"PingFangSC-Regular" size:13.0];
         [btn setTitleColor: [UIColor colorWithRed:0/255.0 green:36/255.0 blue:100/255.0 alpha:1/1.0] forState:UIControlStateNormal];
-        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
         [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 6, 0, 0)];
-        CGSize titleSize = [str sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:btn.titleLabel.font.fontName size:btn.titleLabel.font.pointSize]}];
+        // CGSize titleSize = [str sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:btn.titleLabel.font.fontName size:btn.titleLabel.font.pointSize]}];
         
-        [btn setCt_size:CGSizeMake(titleSize.width+btn.currentImage.size.width+6, btn.currentImage.size.width)];
-        //btn.hidden= YES;
+        // [btn setCt_size:CGSizeMake(titleSize.width+btn.currentImage.size.width+6, btn.currentImage.size.width)];
         _shareBtn = btn;
-        [self.contentView addSubview:_shareBtn];
+        [self.containerView addSubview:_shareBtn];
     }
     
     return _shareBtn;
@@ -202,22 +223,29 @@
 {
     if (!_commentBtn) {
         UIButton *btn = [[UIButton alloc] init];
-        NSString *str = @"回复(10000)";
+        // NSString *str = @"回复(10000)";
         [btn setImage:[UIImage imageNamed:@"回复"] forState:UIControlStateNormal];
-        [btn setTitle:str forState:UIControlStateNormal];
         btn.titleLabel.font =  [UIFont fontWithName:@"PingFangSC-Regular" size:13.0];
         [btn setTitleColor: [UIColor colorWithRed:0/255.0 green:36/255.0 blue:100/255.0 alpha:1/1.0] forState:UIControlStateNormal];
-        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
         [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 6, 0, 0)];
-        CGSize titleSize = [str sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:btn.titleLabel.font.fontName size:btn.titleLabel.font.pointSize]}];
+        // CGSize titleSize = [str sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:btn.titleLabel.font.fontName size:btn.titleLabel.font.pointSize]}];
         
-        [btn setCt_size:CGSizeMake(titleSize.width+btn.currentImage.size.width+6, btn.currentImage.size.width)];
-        //btn.hidden= YES;
         _commentBtn = btn;
-        [self.contentView addSubview:_commentBtn];
+        [self.containerView addSubview:_commentBtn];
     }
-    
     return _commentBtn;
 }
 @end
+
+
+
+
+
+
+
+
+
+
+
 

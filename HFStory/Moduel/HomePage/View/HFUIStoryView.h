@@ -10,32 +10,35 @@
 #import <YYLabel.h>
 #import "HFStorySectionView.h"
 #import "HFStoryViewModel.h"
+#import "HFStoryHeaderView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HFUIStoryView : UITableViewCell
-@property (strong, nonatomic) UIImageView *headerImageView;
-//故事标题
-@property (strong, nonatomic)  UILabel *storyTitleLabel;
-//是否是原创
-@property (strong, nonatomic)  UIImageView *originalImageView;
 
 /**
- 昵称
- */
-@property (strong, nonatomic) UILabel *nickNameLabel;
-
-/**
- 发表时间
- */
-@property (strong, nonatomic)  YYLabel *creatTimeLabel;
-
-/**
-故事开头
+ 故事开头
  */
 @property (strong, nonatomic)  UIButton *likeBtn;
 @property (strong, nonatomic)  UIButton *shareBtn;
 @property (strong, nonatomic)  UIButton *commentBtn;
+@property (strong, nonatomic) RACSignal *sectionSelected;
+/* 摆放作者，头像等内容 */
+@property(strong,nonatomic)HFStoryHeaderView *headerView;
+@property(strong,nonatomic)HFStorySectionView *beginningSectionView;
+@property(strong,nonatomic)HFStorySectionView *enddingSectionView;
+@property (nonatomic, strong) UIView * containerView;
+@property (nonatomic, strong) UIView * foregroundView;
+@property (nonatomic, strong) UIView * interView;
+@property(strong,nonatomic)YYLabel *storyTileLabel;
+@property(assign,nonatomic)NSInteger visbleIndex;
+@property(assign,nonatomic)NSInteger currentHeight;
+@property(assign,nonatomic)CGFloat closeHeight;
+@property(assign,nonatomic)CGFloat openHeight;
 -(void)setViewModel:(HFStoryViewModel*) storyViewModel;
+-(UIView *)firstSectionView;
+- (void)unfold:(BOOL)value animated:(BOOL )animated completion:(void (^)(void))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
+

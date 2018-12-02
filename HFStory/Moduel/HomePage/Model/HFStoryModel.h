@@ -23,12 +23,18 @@ typedef enum : NSUInteger {
 NS_ASSUME_NONNULL_BEGIN
 @interface HFStorySectionModel : NSObject
 @property(strong,nonatomic) NSArray *storySectionElementArray;
-+(instancetype)storySectionModeWithDictionary:(NSDictionary*)dic;
 @end
+
+
 @interface HFStoryElementModel : NSObject
 @property(strong,nonatomic) NSString *type;
 @property(strong,nonatomic) NSString *content;
+@property(assign,nonatomic) NSInteger width;
+@property(assign,nonatomic) NSInteger height;
 @end
+
+
+
 @interface HFStoryModel : NSObject
 @property (strong, nonatomic) NSURL *headerImageUrl;
 //故事标题
@@ -36,21 +42,24 @@ NS_ASSUME_NONNULL_BEGIN
 //是否是原创
 @property (assign, nonatomic)  BOOL  isOriginal;
 
+@property (assign, nonatomic) NSInteger commentNum;
+@property (assign, nonatomic) NSInteger thumbsUpNum;
+
 /**
  昵称
  */
-@property (strong, nonatomic) NSString *nickName;
+@property (strong, nonatomic) NSString *ownerName;
+@property (strong, nonatomic) NSString *ownerID;
+@property (strong, nonatomic) NSString *storyID;
+
+@property (strong, nonatomic) NSArray<HFStoryElementModel*> *particulars;
+
+@property (strong, nonatomic) NSArray<HFStoryElementModel*> *outlines;
 
 /**
  发表时间
  */
 @property (strong, nonatomic)  NSString *creatTime;
-
-/**
- 故事内容
- */
-@property(strong,nonatomic) NSArray<HFStorySectionModel*> *storySectionArray;
-+(instancetype)storyModelWithDictionary:(NSDictionary *)dic;
 @end
 
 

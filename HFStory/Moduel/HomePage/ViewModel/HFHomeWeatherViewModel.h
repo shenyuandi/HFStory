@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HFHomeWeatherViewModel : NSObject
-+ (instancetype)weatherItemWithDict:(NSDictionary *)dict;
++ (instancetype)weatherViewModeToday;
 
 @property (strong, nonatomic) NSString *city_name;
 
@@ -29,6 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSString *icon_night;
 
+@property (nonatomic, strong) RACCommand *requestCmd;
+@property (nonatomic, strong) RACSubject *finishSigal;
+@property (strong,nonatomic) NSString* cond_code;
+-(void)getWeatherOfCity:(NSString *)city;
+-(void)setDateOffset:(NSInteger) offset;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *backToTodayButton;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *weatherIcon;
 @property (weak, nonatomic) HFHomeNavigationBarTitleTextView *textView;
 
 @property (assign, nonatomic, getter=isUnfold) BOOL unfold;
@@ -36,10 +37,9 @@
     [super awakeFromNib];
     
     self.titleButton.frame = CGRectMake(0, kMaxTitleY, SCREEN_WIDTH, kNavigationBarHeight - 20.0);
-    self.weatherLabel.ct_centerX = SCREEN_WIDTH* 0.5;
-    self.searchButton.ct_x = SCREEN_WIDTH - self.searchButton.ct_width;
+   // self.searchButton.ct_x = SCREEN_WIDTH - self.searchButton.ct_width;
     
-    
+    self.backgroundColor = MainBGC;
     // 添加标题控件
     HFHomeNavigationBarTitleTextView *textView = [[HFHomeNavigationBarTitleTextView alloc] init];
     textView.frame = CGRectMake(0, kMaxTitleY, SCREEN_WIDTH, kNavigationBarHeight - kMaxTitleY);
@@ -57,9 +57,14 @@
     _weatherItem = weatherItem;
     
     self.textView.dateString = weatherItem.date;
-    
-    NSString *weatherStr = [NSString stringWithFormat:@"%@     %@     %@°C",weatherItem.city_name,weatherItem.climate,weatherItem.temperature];
+    if(self.weatherItem.climate != nil)
+    {
+    NSString *weatherStr = [NSString stringWithFormat:@"%@  %@   %@°C",weatherItem.city_name,weatherItem.climate,weatherItem.temperature];
     self.weatherLabel.text = weatherStr;
+    }
+    else
+        self.weatherLabel.text = weatherItem.city_name;
+    [self.weatherIcon setImage:[UIImage imageNamed:self.weatherItem.cond_code]];
 }
 
 #pragma mark - 事件响应

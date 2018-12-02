@@ -31,6 +31,7 @@
 }
 - (void)setUpNavigationBar {
     HFHomeNavigationBar *navBar = [[HFHomeNavigationBar alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 44)];
+    navBar.translucent = NO;
     [self setValue:navBar forKeyPath:@"navigationBar"];
 }
 

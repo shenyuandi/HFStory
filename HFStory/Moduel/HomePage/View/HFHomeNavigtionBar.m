@@ -26,18 +26,18 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setUpBackgroundView];
-        [self setTintColor:[UIColor grayColor]];
+       // [self setTintColor:[UIColor grayColor]];
+        self.translucent = NO;
         
         self.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:16.0]};
     }
     return self;
 }
-
 - (void)setUpBackgroundView {
     // 设置navBar背景色
-    UIView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -20,SCREEN_WIDTH, kNavigationBarHeight)];
-    backgroundView.backgroundColor = [UIColor colorWithWhite:254/255.0 alpha:1.0];
-    UIImage *underlineImage = [UIImage yy_imageWithColor:[UIColor colorWithWhite:239/255.0 alpha:1.0]];
+    UIView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH, kNavigationBarHeight-20)];
+   // backgroundView.backgroundColor = MainBGC;
+    UIImage *underlineImage = [UIImage yy_imageWithColor:MainBGC];
     UIImageView *underlineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, kNavigationBarHeight, SCREEN_WIDTH, 0.5)];
     underlineImageView.image = underlineImage;
     [backgroundView addSubview:underlineImageView];
@@ -47,37 +47,38 @@
 }
 
 #pragma mark - 对外公有方法
-//- (void)updateTitleViewWithOffset:(CGFloat)offset {
-//
-//    // 修改状态栏的透明度
-//    [self changeAlphaOfStatusBar:(offset/ONEScrollOffsetLimit)];
-//
-//    // 让titleView更新
-//    [self.homeTitleView updateSubFrameAndAlphaWithOffset:offset];
-//}
-//
-//- (void)confirmTitlViewWithOffset:(CGFloat)offset {
-//
-//    if (offset >= ONEScrollOffsetLimit * 0.5) {
-//        [self changeAlphaOfStatusBar:1];
-//        [self.homeTitleView updateSubFrameAndAlphaWithOffset:ONEScrollOffsetLimit];
-//    } else {
-//        [self changeAlphaOfStatusBar:0];
-//        [self.homeTitleView updateSubFrameAndAlphaWithOffset:0];
-//    }
-//}
-//
-//- (void)updateTitleViewBackToTodayButtonVisible:(BOOL)isHidden {
-//    [self.homeTitleView updateBackButtonVisible:isHidden];
-//}
-//
-//- (void)updateTitleViewDateStringWithDateString:(NSString *)dateString {
-//    [self.homeTitleView updateDateStringWithDateString:dateString];
-//}
-//
-//- (void)updateTitleViewWeatherStringWithWeatherItem:(ONEHomeWeatherItem *)weatherItem {
-//    self.homeTitleView.weatherItem = weatherItem;
-//}
+- (void)updateTitleViewWithOffset:(CGFloat)offset {
+    
+    // 修改状态栏的透明度
+    [self changeAlphaOfStatusBar:(offset/ONEScrollOffsetLimit)];
+    
+    // 让titleView更新
+    [self.homeTitleView updateSubFrameAndAlphaWithOffset:offset];
+}
+
+- (void)confirmTitlViewWithOffset:(CGFloat)offset {
+    
+    if (offset >= ONEScrollOffsetLimit * 0.5) {
+        [self changeAlphaOfStatusBar:1];
+        [self.homeTitleView updateSubFrameAndAlphaWithOffset:ONEScrollOffsetLimit];
+    } else {
+        [self changeAlphaOfStatusBar:0];
+        [self.homeTitleView updateSubFrameAndAlphaWithOffset:0];
+    }
+}
+
+- (void)updateTitleViewBackToTodayButtonVisible:(BOOL)isHidden {
+    [self.homeTitleView updateBackButtonVisible:isHidden];
+}
+
+- (void)updateTitleViewDateStringWithDateString:(NSString *)dateString {
+    [self.homeTitleView updateDateStringWithDateString:dateString];
+}
+
+- (void)updateTitleViewWeatherStringWithWeatherItem:(HFHomeWeatherViewModel *)weatherItem {
+    self.homeTitleView.weatherItem = weatherItem;
+}
+
 
 - (void)hideCustomTitleView {
     self.homeTitleView.hidden = YES;
@@ -139,7 +140,7 @@
 - (HFHomeNavigationTitleView *)homeTitleView {
     if (!_homeTitleView) {
         HFHomeNavigationTitleView *homeTitleView = [HFHomeNavigationTitleView homeNavTitleView];
-        homeTitleView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kNavigationBarHeight);
+        homeTitleView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kNavigationBarHeight-20);
         [self addSubview:homeTitleView];
         _homeTitleView = homeTitleView;
     }

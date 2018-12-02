@@ -7,6 +7,8 @@
 //
 #import "AppDelegate.h"
 #import "HFStoryModel.h"
+#import "ONELaunchController.h"
+#import <IQKeyboardManager.h>
 @interface AppDelegate ()
 
 @end
@@ -16,6 +18,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    
+    ONELaunchController *launchVC = [[ONELaunchController alloc] init];
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.rootViewController = launchVC;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -48,3 +65,4 @@
 
 
 @end
+
